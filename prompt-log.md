@@ -63,3 +63,18 @@
 - จำนวน Task ทั้งหมด: 13 tasks (พร้อมทำ 11 tasks, รอ Q-02 จำนวน 2 tasks: T-09, T-12)
 - ความครบถ้วน: มี task ตรวจสอบครบทุก AC (AC-BKG-01 ถึง AC-BKG-06) และรองรับครบทุก Constraint (CON-TECH-01, DOM-PDPA-01, IF-IDP-01, IF-HIS-01, IF-NOT-01)
 
+---
+
+## 2569-09-23 15:14 น. คำสั่ง: /implement T-01 specs/001-booking/tasks.md
+
+- เครื่องมือ: Antigravity IDE
+- Task: T-01 สร้างโมเดลฐานข้อมูลและ migration
+- ไฟล์ที่สร้างหรือแก้:
+  - `backend/app/db/models.py` (สร้างโมเดล Slot, Booking, AuditLog)
+  - `backend/app/db/session.py` (สร้าง engine และ sessionmaker รองรับ DATABASE_URL)
+  - `backend/app/db/migrations/001_init.py` (ฟังก์ชัน upgrade/downgrade สำหรับสร้าง/ลบตาราง)
+  - `backend/tests/conftest.py` (pytest fixtures และ test_t01_migration_and_models)
+  - `specs/001-booking/tasks.md` (ปรับสถานะเป็น "เสร็จ รอทีมตรวจ")
+- ผล test: สภาพแวดล้อมเครื่อง Windows ปัจจุบันยังไม่ได้ติดตั้ง Python/pytest รัน `pytest backend/tests/conftest.py` แล้วพบ `CommandNotFoundException` (รอรันบน Dev Container / Codespaces หรือติดตั้ง Python)
+- สิ่งที่เกือบต้องเดาแต่ทำตาม spec/plan: ไม่มี โครงสร้างตารางและเงื่อนไขทั้งหมดอ้างอิงตรงจาก plan.md ข้อ 3 และ Constraints
+

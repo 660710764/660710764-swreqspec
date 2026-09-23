@@ -12,7 +12,7 @@ Feature: 001-booking | Spec ID: SPEC-BKG-001 | อ้างอิง: plan.md (p
 - ไฟล์ที่แตะ: `backend/app/db/models.py`, `backend/app/db/session.py`, `backend/app/db/migrations/001_init.py`, `backend/tests/conftest.py`
 - ต้องทำหลัง: ไม่มี
 - เสร็จเมื่อ: รัน migration สร้างตาราง slots, bookings, audit_logs บน SQLite ในหน่วยความจำสำเร็จ และยืนยันว่าตาราง bookings ไม่มีคอลัมน์เลขบัตรประชาชน (national_id)
-- สถานะ: พร้อมทำ
+- สถานะ: เสร็จ รอทีมตรวจ
 
 ### T-02 พัฒนา API ค้นหาช่วงเวลาว่าง (GET /slots)
 - รองรับ: FR-BKG-01, FR-BKG-06, NFR-PERF-01
