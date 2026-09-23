@@ -53,3 +53,13 @@
   6. เงื่อนไขการเลือกระหว่างการส่งทาง SMS หรือ LINE (ติด Q-06)
   7. จำนวนรอบสูงสุดของ Retry Queue สำหรับการส่งข้อความซ้ำ (ติด Q-07)
 
+---
+
+## 2569-09-23 15:03 น. คำสั่ง: /tasks
+
+- เครื่องมือ: Antigravity IDE
+- ไฟล์เป้าหมาย: specs/001-booking/spec.md
+- ผลลัพธ์: specs/001-booking/tasks.md
+- จำนวน Task ทั้งหมด: 13 tasks (พร้อมทำ 11 tasks, รอ Q-02 จำนวน 2 tasks: T-09, T-12)
+- ความครบถ้วน: มี task ตรวจสอบครบทุก AC (AC-BKG-01 ถึง AC-BKG-06) และรองรับครบทุก Constraint (CON-TECH-01, DOM-PDPA-01, IF-IDP-01, IF-HIS-01, IF-NOT-01)
+
